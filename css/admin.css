@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #f8de7e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-link:hover {
+    background-color: #e6c76e;
+    transform: scale(1.05);
+}
+
+.tab-link.active {
+    background-color: #e6c76e;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content h2 {
+    margin-top: 0;
+    color: #333;
+}

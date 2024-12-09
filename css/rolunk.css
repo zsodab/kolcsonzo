@@ -1,0 +1,125 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../kepek/csapat.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: none;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #f8de7e;
+    color: black;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+td {
+    background-color: #fef9d6;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1e1b3;
+}
+
+tr:hover td {
+    background-color: #e0cf86;
+}
+
+
+.ratings-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.ratings-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rating-card {
+    min-width: 323px;
+    min-height: 250px;
+    box-sizing: border-box;
+    background: #f8de7e; 
+    padding: 15px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black; 
+}
+
+.rating-card p {
+    margin: 50px 0;
+}
+
+.stars {
+    color: orange;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.star {
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0 2px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}

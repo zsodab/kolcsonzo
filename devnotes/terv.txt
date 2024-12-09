@@ -1,0 +1,89 @@
+user
+- id
+- fullname
+- dateofbirth
+- phone
+- hasActiveBooking
+- registerDate
+- deleteDate
+- isDeleted
+
+onlineUser
+- id
+- username
+- password
+- userID
+
+admin
+- id
+- oUserID
+
+dealership
+- id
+- name
+- isActive
+- city
+- address
+- phone
+
+dealer
+- id
+- oUserID
+- dshipID
+
+car
+- id
+- isAvailable
+- brand
+- model
+- year
+- capacity
+- fuelType
+- fuelConsumption
+- description
+- depositAmount
+- tierIduration
+- tierIprice
+- tierIIduration
+- tierIIprice
+- tierCustomNotes
+- dealerID
+
+booking_data
+- id
+- status
+- datePickup
+- dateReturn
+- returnedOnTime
+- priceEstimate
+- pricePaid
+- wantsCallBack
+- dshipID
+- carID
+- oUserID
+- userID if offline
+
+
+conversation
+- id
+- type
+- isClosed
+- isDeleted
+- oUserID
+- dshipID
+- carID if review
+
+message
+- id
+- text
+- date
+- isDeleted
+- senderID
+- convID
+
+
+review
+- id
+- rating
+- messageID
+- bookingID

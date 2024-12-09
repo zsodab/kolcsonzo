@@ -1,0 +1,309 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: url('../kepek/telephely.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* background-color: white; */
+    color: #333;
+}
+
+.menu {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-panel {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+    min-width: 200px;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #f8de7e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6c76e;
+    transform: scale(1.05);
+}
+
+.car-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.car-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.car-box:hover .overlay {
+    opacity: 1;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+#large-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1001;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+#close-btn {
+    background-color: #f8de7e;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#close-btn:hover {
+    background-color: #e6c76e; 
+    transform: scale(1.05);
+}
+
+#large-box-content {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold
+}
+
+#large-box-content form {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.hidden-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden-info p {
+    flex: 1;
+    text-align: left;
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.online-inquiry-btn {
+    display: inline-block;
+    background-color: #f8de7e;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.online-inquiry-btn:hover {
+    background-color: #e6c76e;
+    transform: scale(1.05);
+}
+
+.denied-inquiry-btn {
+    background-color: #beb9a1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    font-size: 16px;
+    margin-left: 20px;
+    color: black;
+}
+
+.car-box h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.car-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.car-box img:hover {
+    transform: scale(1.05);
+}
+
+.car-box p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.car-box p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.car-box .hidden-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.car-box .hidden-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.car-box .online-inquiry-btn {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-box .online-inquiry-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.car-box .denied-inquiry-btn {
+    background-color: #d9534f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: not-allowed;
+    font-size: 16px;
+    color: white;
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+.car-box .denied-inquiry-btn:hover {
+    opacity: 1;
+}
+
+.car-box .price {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+}
+

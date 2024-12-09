@@ -1,0 +1,13 @@
+//Admin oldal menü
+
+felhasználók gomb:
+- kategória (Minden felhasználó/Csak fiókkal rendelkező)
+- felhasználók listázása gomb
+listázott felhasználó:
+- felhasználói adat módosítása
+- kereskedő/admin táblába felvétel
+- felhasználó rendelései
+- felhasználó beszélgetései->üzenetei
+
+
+kereskedések gomb:

@@ -1,0 +1,135 @@
+INSERT INTO dealership (name, isActive, city, address, phone) VALUES ('Kocsimánia', TRUE, 'Szeged', 'Kossuth Lajos utca 5', '+36201111111');
+INSERT INTO dealership (name, isActive, city, address, phone) VALUES ('Autókölcsönző KFT.', TRUE, 'Debrecen', 'Piac utca 8', '+36202222222');
+INSERT INTO dealership (name, isActive, city, address, phone) VALUES ('KölcsönAutó', TRUE, 'Szeged', 'Andrássy út 10', '+36203333333');
+
+
+
+
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (1, 'Admin', '2000-01-01', '+36301234567', 0, '2024-11-29 21:14:13', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (2, 'Nagy János', '1998-03-14', '+36301111222', 0, '2024-11-29 21:17:03', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (3, 'Kerekes Ábel', '2002-10-01', '+36309876543', 0, '2024-11-29 21:18:05', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (4, 'Kékesi Lilla', '2001-11-03', '+36302345678', 0, '2024-11-29 21:18:49', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (5, 'Szegedi Balázs', '2000-08-07', '+36201234567', 0, '2024-11-29 21:20:19', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (6, 'Debreceni Péter', '1997-05-24', '+36202345678', 0, '2024-11-29 21:21:13', NULL, 0);
+INSERT INTO `user` (`id`, `fullname`, `dateofbirth`, `phone`, `hasActiveBooking`, `registerDate`, `deleteDate`, `isDeleted`) VALUES (7, 'Budapesti Károly', '1999-07-11', '+36203456789', 0, '2024-11-29 21:21:51', NULL, 0);
+INSERT INTO user (fullname, dateofbirth, phone, hasActiveBooking, registerDate) VALUES ('Nyugger Béla', '1990-01-01', '06301212121', 0, '2024-11-25 12:00:00');
+
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (1, 'admin', '$2y$10$5KdAG3BuKIrbb/n4kNEHK.dCO5pIgCrGlpLq8HV5icnE7BHRac35O', 1);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (2, 'nagyjani1', '$2y$10$4BHQH7hlWbCZC97lTWTRlePbJntDuNytykM4WoovQ0VmTHqMr4Gf.', 2);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (3, 'kecske3', '$2y$10$rUwHfJS/hySVNXA6vN/z/uWflrkmUz9.fntCbn3G3HS.iqwOcgK2m', 3);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (4, 'lilla0134', '$2y$10$2FjVzFpsRaKYoaQVcIXtHOWqtHj3DDaGqI0dy8kPDCNIECj4TJMLW', 4);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (5, 'd_Szeged1', '$2y$10$AvKiJpiQHpb.cgHVDqDvc.T1F7jgKHgV.s1ryEEFqEia./goDM4j2', 5);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (6, 'd_Debrecen1', '$2y$10$xeVX0KsbFNgqDsSafMvy6.EuUBir96UStqY1M1wBsSIFKtbnvB9Cu', 6);
+INSERT INTO `onlineuser` (`id`, `username`, `password`, `userID`) VALUES (7, 'd_Budapest1', '$2y$10$TmPzJ6ZCtlomOSfmpX3FnusgerXkW6O7vhqHLlunGqjJyWRGooTVe', 7);
+
+
+INSERT INTO `dealer` (`id`, `oUserID`, `oUserName`, `dshipID`) VALUES (1, 5, 'd_Szeged1', 1);
+INSERT INTO `dealer` (`id`, `oUserID`, `oUserName`, `dshipID`) VALUES (2, 6, 'd_Debrecen1', 2);
+INSERT INTO `dealer` (`id`, `oUserID`, `oUserName`, `dshipID`) VALUES (3, 7, 'd_Budapest1', 3);
+
+
+INSERT INTO `admin` (`id`, `oUserID`, `oUserName`) VALUES (1, 1, 'admin');
+
+
+
+
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, tierCustomNotes, dealerID) VALUES
+(1, 'Audi', 'A4', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 12500, 30, 7700, '-', 1),
+(1, 'Audi', 'A6', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 21500, 30, 16550, '-', 1),
+(1, 'Audi', 'A8', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 11000, 30, 8500, '-', 1),
+(1, 'Audi', 'Q3', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 16000, 30, 12000, '-', 1),
+(1, 'Audi', 'Q5', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 14000, 30, 10000, '-', 1),
+(1, 'Audi', 'Q7', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 17000, 0, 0, '10 nap felett személyes ajánlatot kínálunk', 1),
+(1, 'Audi', 'Q8', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20500, 30, 17500, '-', 1),
+(1, 'Audi', 'TT', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 18000, 30, 25000, '-', 1),
+(1, 'Audi', 'R8', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 25000, 0, 0, '10-20 napig 22500Ft, efelett érdeklődni személyesen', 1),
+(1, 'Audi', 'RS3', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20000, 30, 16500, '-', 1);
+
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, tierCustomNotes, dealerID) VALUES
+(1, 'BMW', '1-es', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 12500, 30, 7700, '-', 2),
+(1, 'BMW', '2-es', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 21500, 30, 16550, '-', 2),
+(1, 'BMW', '3-as', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 11000, 30, 8500, '-', 2),
+(1, 'BMW', '4-es', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 16000, 30, 12000, '-', 2),
+(1, 'BMW', '5-ös', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 14000, 30, 10000, '-', 2),
+(1, 'BMW', '6-os', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 17000, 0, 0, '10 nap felett személyes ajánlatot kínálunk', 2),
+(1, 'BMW', '7-es', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20500, 30, 17500, '-', 2),
+(1, 'BMW', 'X1', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 18000, 30, 16000, '-', 2),
+(1, 'BMW', 'X2', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 25000, 0, 0, '10-20 napig 22500Ft, efelett érdeklődni személyesen', 2),
+(1, 'BMW', 'X3', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20000, 30, 16500, '-', 2);
+
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, tierCustomNotes, dealerID) VALUES
+(1, 'Mercedes', 'A-osztály', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 12500, 30, 7700, '-', 3),
+(1, 'Mercedes', 'B-osztály', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 21500, 30, 16550, '-', 3),
+(1, 'Mercedes', 'C-osztály', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 11000, 30, 8500, '-', 3),
+(1, 'Mercedes', 'E-osztály', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 16000, 30, 12000, '-', 3),
+(1, 'Mercedes', 'S-osztály', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 14000, 30, 10000, '-', 3),
+(1, 'Mercedes', 'GLA', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 17000, 0, 0, '10 nap felett személyes ajánlatot kínálunk', 3),
+(1, 'Mercedes', 'GLC', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20500, 30, 17500, '-', 3),
+(1, 'Mercedes', 'GLE', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 18000, 30, 16000, '-', 3),
+(1, 'Mercedes', 'GLS', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 25000, 0, 0, '10-20 napig 22500Ft, efelett érdeklődni személyesen', 3),
+(1, 'Mercedes', 'AMG GT', 2019, 5, 'benzin', 7, 'Ez egy nagyon szép autó.', 10000, 10, 20000, 30, 16500, '-', 3);
+
+
+
+
+
+INSERT INTO booking_data (status, datePickup, dateReturn, priceEstimate, pricePaid, dshipID, carID, oUserID, userID)
+VALUES ('active', '2024-11-28 12:00:00', '2024-12-07 12:00:00', 112500, 10000, 1, 1, 2, 2);
+UPDATE user SET hasActiveBooking = 1 WHERE id = 2;
+
+INSERT INTO booking_data (status, datePickup, dateReturn, priceEstimate, pricePaid, dshipID, carID, userID)
+VALUES ('active', '2024-11-26 12:00:00', '2024-12-05 12:00:00', 140000, 10000, 2, 15, 8);
+UPDATE user SET hasActiveBooking = 1 WHERE id = 8;
+
+INSERT INTO booking_data (status, datePickup, dateReturn, priceEstimate, pricePaid, dshipID, carID, oUserID, userID)
+VALUES ('active', '2024-11-27 12:00:00', '2024-11-29 12:00:00', 25000, 10000, 3, 21, 3, 3);
+UPDATE user SET hasActiveBooking = 1 WHERE id = 3;
+
+
+UPDATE car SET isAvailable = 0 WHERE id = 1;
+UPDATE car SET isAvailable = 0 WHERE id = 15;
+UPDATE car SET isAvailable = 0 WHERE id = 21;
+
+
+UPDATE car
+SET picture = 'kepek/autok/audi.jpg'
+WHERE brand = 'Audi';
+
+UPDATE car
+SET picture = 'kepek/autok/bmw.jpg'
+WHERE brand = 'BMW';
+
+UPDATE car
+SET picture = 'kepek/autok/mercedes.jpg'
+WHERE brand = 'Mercedes';
+
+--lesz majd folytatva
+
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Suzuki', 'SX4', 2010, 5, 'dízel', 6, 'Ez egy Suzuki', 10000, 10, 10500, 30, 8000, 'kepek/autok/suzuki.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Opel', 'Insignia', 2016, 5, 'benzin', 7, 'Ez egy Open', 10000, 10, 18500, 30, 1600, 'kepek/autok/opel.jfif', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Ford', 'Focus', 2018, 5, 'dízel', 5, 'Ez egy Ford', 10000, 10, 15500, 30, 13000, 'kepek/autok/ford.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Toyota', 'Corolla', 2019, 5, 'benzin', 6, 'Ez egy Toyota', 10000, 10, 17500, 30, 15000, 'kepek/autok/toyota.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Volkswagen', 'Passat', 2017, 5, 'dízel', 5, 'Ez egy Volkswagen', 10000, 10, 16500, 30, 14000, 'kepek/autok/volkswagen.jfif', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'BMW', '3', 2016, 5, 'dízel', 6, 'Ez egy BMW', 10000, 10, 18500, 30, 16000, 'kepek/autok/bmw.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Mercedes', 'C', 2017, 5, 'benzin', 7, 'Ez egy Mercedes', 10000, 10, 19500, 30, 17000, 'kepek/autok/mercedes.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Skoda', 'Octavia', 2018, 5, 'dízel', 5, 'Ez egy Skoda', 10000, 10, 15500, 30, 13000, 'kepek/autok/skoda.jpg', 1);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Suzuki', 'SX4', 2010, 5, 'dízel', 6, 'Ez egy Suzuki', 10000, 10, 10500, 30, 8000, 'kepek/autok/suzuki.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Opel', 'Insignia', 2016, 5, 'benzin', 7, 'Ez egy Open', 10000, 10, 18500, 30, 1600, 'kepek/autok/opel.jfif', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Ford', 'Focus', 2018, 5, 'dízel', 5, 'Ez egy Ford', 10000, 10, 15500, 30, 13000, 'kepek/autok/ford.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Toyota', 'Corolla', 2019, 5, 'benzin', 6, 'Ez egy Toyota', 10000, 10, 17500, 30, 15000, 'kepek/autok/toyota.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Volkswagen', 'Passat', 2017, 5, 'dízel', 5, 'Ez egy Volkswagen', 10000, 10, 16500, 30, 14000, 'kepek/autok/volkswagen.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'BMW', '3', 2016, 5, 'dízel', 6, 'Ez egy BMW', 10000, 10, 18500, 30, 16000, 'kepek/autok/bmw.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Mercedes', 'C', 2017, 5, 'benzin', 7, 'Ez egy Mercedes', 10000, 10, 19500, 30, 17000, 'kepek/autok/mercedes.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Skoda', 'Octavia', 2018, 5, 'dízel', 5, 'Ez egy Skoda', 10000, 10, 15500, 30, 13000, 'kepek/autok/skoda.jpg', 2);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Suzuki', 'SX4', 2010, 5, 'dízel', 6, 'Ez egy Suzuki', 10000, 10, 10500, 30, 8000, 'kepek/autok/suzuki.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Opel', 'Insignia', 2016, 5, 'benzin', 7, 'Ez egy Open', 10000, 10, 18500, 30, 1600, 'kepek/autok/opel.jfif', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Ford', 'Focus', 2018, 5, 'dízel', 5, 'Ez egy Ford', 10000, 10, 15500, 30, 13000, 'kepek/autok/ford.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Toyota', 'Corolla', 2019, 5, 'benzin', 6, 'Ez egy Toyota', 10000, 10, 17500, 30, 15000, 'kepek/autok/toyota.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Volkswagen', 'Passat', 2017, 5, 'dízel', 5, 'Ez egy Volkswagen', 10000, 10, 16500, 30, 14000, 'kepek/autok/volkswagen.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'BMW', '3', 2016, 5, 'dízel', 6, 'Ez egy BMW', 10000, 10, 18500, 30, 16000, 'kepek/autok/bmw.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Mercedes', 'C', 2017, 5, 'benzin', 7, 'Ez egy Mercedes', 10000, 10, 19500, 30, 17000, 'kepek/autok/mercedes.jpg', 3);
+INSERT INTO car (isAvailable, brand, model, year, capacity, fuelType, fuelConsumption, description, depositAmount, tierIduration, tierIprice, tierIIduration, tierIIprice, picture, dealerID) VALUES (1, 'Skoda', 'Octavia', 2018, 5, 'dízel', 5, 'Ez egy Skoda', 10000, 10, 15500, 30, 13000, 'kepek/autok/skoda.jpg', 3);
+
+
+UPDATE car SET picture = 'kepek/autok/opel.jpg' WHERE picture = 'kepek/autok/opel.jfif';
+UPDATE car SET picture = 'kepek/autok/volkswagen.jpg' WHERE picture = 'kepek/autok/volkswagen.jfif';
